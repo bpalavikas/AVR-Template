@@ -1,8 +1,8 @@
 # Makefile inputs
-MCU\ 
-LOG_LEVEL\ 
-BUILD_TYPE\ 
-PRG
+    -MCU 
+    -LOG_LEVEL 
+    -BUILD_TYPE 
+    -PRG
 
 # Default values
 MCU = atmega328p\
