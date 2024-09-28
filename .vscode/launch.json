@@ -1,0 +1,82 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations":
+    [
+        {
+            "name": "AVR-ICE-DBG",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/${workspaceFolderBasename}.elf",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/avr-gdb",
+            "targetArchitecture": "avr",
+            "setupCommands":
+            [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ingnoreFailures": true
+                }
+            ],
+            "preLaunchTask": "AVR build",
+            "internalConsoleOptions": "openOnSessionStart",
+            "debugServerPath": "/usr/bin/avrdude",
+            "debugServerArgs": "-p m328p -c avrisp2 -P usb",
+            "postRemoteConnectCommands": 
+            [
+                "target extended-remote :3333",
+                "monitor reset halt",
+                "load"
+            ],
+            "logging": 
+            {
+                "moduleLoad": true,
+                "programOutput": true,
+                "trace": true
+            }
+        },
+
+        {
+            "name": "PICKIT 4",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/${workspaceFolderBasename}.elf",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/avr-gdb",
+            "targetArchitecture": "avr",
+            "setupCommands":
+            [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ingnoreFailures": true
+                }
+            ],
+            "preLaunchTask": "AVR build",
+            "internalConsoleOptions": "openOnSessionStart",
+            "debugServerPath": "/usr/bin/avrdude",
+            "debugServerArgs": "-p m328p -c pickit4 -P usb",
+            "postRemoteConnectCommands": 
+            [
+                "target extended-remote :3333",
+                "monitor reset halt",
+                "load"
+            ],
+            "logging": 
+            {
+                "moduleLoad": true,
+                "programOutput": true,
+                "trace": true
+            }
+        }
+    ]
+}

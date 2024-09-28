@@ -1,0 +1,24 @@
+{
+    "tasks":
+    [
+        {
+            "label": "PICKIT4 FLASH",
+            "type": "shell",
+            "command": "avrdude",
+            "args": 
+            [
+                "-p", "m328p",
+                "-c", "pickit4",
+                "-P", "usb",
+                "-U", "flash:w:${workspaceFolder}/build/${workspaceFolderBasename}.hex:i"
+            ],
+            "group":
+            {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher":[]
+        }
+    ],
+    "version": "2.0.0"
+}

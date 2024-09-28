@@ -1,0 +1,25 @@
+{
+    "configurations": 
+    [
+        {
+            "name": "AVR",
+            "includePath": 
+            [
+                "${workspaceFolder}/**",
+                "/usr/lib/avr/include/avr/",
+                "core/inc/",
+                "utils/inc/"
+            ],
+            "defines":
+            [
+                "__AVR_ATmega328P__",   // Change to MCU used
+                "F_CPU=16000000UL"      // Set for CPU Frequency
+            ],
+            "compilerPath": "/usr/bin/avr-gcc",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
+
