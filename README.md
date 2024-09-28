@@ -1,23 +1,26 @@
 # Makefile inputs
-MCU LOG_LEVEL BUILD_TYPE PRG
+MCU\ 
+LOG_LEVEL\ 
+BUILD_TYPE\ 
+PRG
 
 # Default values
-MCU = atmega328p
-LOG_LEVEL = DBG
-BUILD_TYPE = debug
+MCU = atmega328p\
+LOG_LEVEL = DBG\
+BUILD_TYPE = debug\
 PRG = atmelice_isp
 
 # Options
 ## BUILD_TYPE
-debug
+debug\
 release
 
 ## LOG_LEVEL
-TRACE
-DBG
-INFO
-WARN
-ERR
+TRACE\
+DBG\
+INFO\
+WARN\
+ERR\
 FATAL
 
 ## MCU
@@ -93,7 +96,7 @@ avr1
 
 ## PRG
 
-jtag	Atmel-ICE (ARM/AVR) in JTAG mode
-dw	    Atmel-ICE (ARM/AVR) in debugWIRE mode
-pdi	    Atmel-ICE (ARM/AVR) in PDI mode
+jtag	Atmel-ICE (ARM/AVR) in JTAG mode\
+dw	    Atmel-ICE (ARM/AVR) in debugWIRE mode\
+pdi	    Atmel-ICE (ARM/AVR) in PDI mode\
 updi	Atmel-ICE (ARM/AVR) in UPDI mode
